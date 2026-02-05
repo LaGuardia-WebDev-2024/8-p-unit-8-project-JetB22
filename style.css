@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: aliceblue;
+  background-color: #b5b662;
   text-align: center;
   color: navy;
   margin: auto;
@@ -17,9 +17,11 @@ h1{
 
 #myCanvas {
   background-image: url("490455841.jpg");
-  background-size: 600px 400px;
+
   border-radius: 300px;
   border: 5px solid white;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
