@@ -6,13 +6,23 @@
 body {
   background-color: #b5b662;
   text-align: center;
-  color: navy;
+  color: rgb(0, 4, 58);
   margin: auto;
   font-family: water;
+  text-align: center;
 }
 
 h1{
-  font-size: 30px;
+  font-size: 50px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-width: 2px;
+  border-style: dashed;
+  width: 600px;
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 #myCanvas {
