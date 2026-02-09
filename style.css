@@ -17,7 +17,7 @@ h1{
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 30px;
   border-width: 2px;
-  border-style: dashed;
+  border-style: double;
   width: 600px;
   margin: auto;
   padding: 10px;
@@ -29,10 +29,19 @@ h1{
   background-image: url("490455841.jpg");
 
   border-radius: 30px;
-  border: 5px solid white;
+  border: 5px solid rgb(27, 0, 88);
   background-repeat: no-repeat;
-  background-size: cover;
-}
+  background-size: cover;}
 
-
-
+h2 {
+  font-size: 30px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-width: 2px;
+  border-style: groove;
+  width: 800px;
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+border-color: burlywood;}

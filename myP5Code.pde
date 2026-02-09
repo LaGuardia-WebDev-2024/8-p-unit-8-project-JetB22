@@ -1,7 +1,8 @@
 //Setup
 setup = function () {
-    size(1200, 1000);
+    size(1000, 800);
     background(255,255,255,0)
+
 }
 
 //vars
@@ -16,8 +17,14 @@ draw = function () {
 
   background(255, 255, 255, 0);
 
+  //Function Calls
 
-
+  drawLizard(800,700,50);
+  drawLizard(200,650,50);
+  drawFrog(500,600,40);
+  drawFrog(250,350,20);
+  drawTurtle(300,500,40);
+  drawTurtle(800,400,30);
   //Move the Frog
     frogX = mouseX;
     jumpAngle += 0.02;
@@ -31,7 +38,7 @@ draw = function () {
     noStroke();
     fill(frogColor);
     
-    ellipse(frogX, frogY+10, frogY/20, frogY/20)
+    ellipse(frogX, frogY+10, (frogY/20)+score, (frogY/20)+score)
 
     ellipse(frogX, frogY, 200/5, 100/5); // face
     ellipse(frogX - 8, frogY - 8, 40/5, 40/5); // left eye socket
@@ -50,6 +57,7 @@ draw = function () {
     ellipse(frogX, frogY , 175/6, 35/5);
 
     //Frog
+
 
 
     //flies
@@ -77,19 +85,22 @@ draw = function () {
         ellipse(f.x, f.y, 20, 10);
 
       // Collide for score
-        if (dist(frogX, frogY, f.x, f.y) < 25) {
+        if (dist(frogX, frogY, f.x, f.y) < 25 + score ) {
             flies.splice(i, 1);
             score++;
+            frogColor = color(139 - random(1,800)/12, 69 + random(1,800)/10, 19 + random(1,800)/12);
+
+
         }
 }
     
 
   //Score
-    stroke(0);
-    strokeWeight(4);
-    fill(frogColor);
-    textSize(100);
-    text("Score: " + score, 20, 90);
+
+    fill(0);
+    textSize(90);
+    text("Score: " + score, 20, 90); 
+};
 
 //Fuctions
 
@@ -107,5 +118,5 @@ var drawTurtle = function(x, y, size){
   textSize(size);
   text("🐢", x, y);
 };
-};
+
 
